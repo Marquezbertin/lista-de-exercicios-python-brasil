@@ -15,5 +15,16 @@ Faça um Programa que converta metros para centímetros.
 """
 
 
-def converter_metros_para_centimetros():
+def metros_para_centimetros(metros):
     """Escreva aqui em baixo a sua solução"""
+    centimetros = metros * 100 # Fórmula para calcular metros em cm; cm = X metros * 100 (1 metro = 100 cm) 
+    return centimetros 
+
+try:
+    metros = float(input("Digite o valor em metros: ")) # interação o usuário informa um valor em metros 
+    centimetros = metros_para_centimetros(metros) # converte para cm 
+    print(f"{metros} metros equivalem a {centimetros} centímetros.") #exibe na tela o valor em cm 
+except ValueError:
+    print("Valor inválido. Certifique-se de digitar um número válido.") # Caso valor informado seja incorreto, uma letra ou caractere por exemplo retorna uma mensagem de erro 
+
+    
